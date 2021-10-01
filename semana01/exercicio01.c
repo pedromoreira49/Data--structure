@@ -1,6 +1,10 @@
 #include <stdio.h>
 
 int main(){
-	printf("working...\n");
+	int q;
+	printf("Informe a quantidade de alunos:\n");
+	scanf("%d", &q);
+
+	
 	return 0;
 }
