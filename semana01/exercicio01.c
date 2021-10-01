@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /*Exercicio: 1.1
 Escreva um programa em C para ler um valor Q que representa a quantidade de alunos de uma turma.
@@ -9,10 +10,28 @@ Calcular e escrever:
 */
 
 int main(){
-	int q;
+	int q, i, cont, opt;
+	float alt, med_alt = 0.0, alt_men = 0.0, med_men = 0.0, bestHeight = 0.0;
 	printf("Informe a quantidade de alunos:\n");
 	scanf("%d", &q);
-
-
+	for (i = 0; i < q; i++){
+		printf("Informe o sexo do(a) aluno(a): 1-masculino 2-feminino\n");
+		scanf("%d", &opt);
+		if(opt == 1){
+			printf("Informe a altura do aluno:\n");
+			scanf("%f", &alt);
+			if(alt > bestHeight){
+				bestHeight = alt;
+			}
+		} else{
+			printf("Informe a altura da aluna:\n");
+			scanf("%f", &alt_men);
+			cont++;
+			med_men = med_men + alt_men;
+		}
+	}//fim do laço for
+	med_alt = med_men / cont;
+	printf("med fem: %.2f\n", med_alt);
+	printf("Best height: %.2f\n", bestHeight);
 	return 0;
 }
