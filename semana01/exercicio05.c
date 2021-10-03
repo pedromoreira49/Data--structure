@@ -11,8 +11,29 @@ Escrever cada dupla em ordem crescente. Os valores em ordem crescente devem ser 
 O programa termina quando os dois valores informados forem iguais (nesta situação os valores não devem ser impressos).
 */
 
-
+void duplaCrescente(int *a, int *b);
 
 int main(){
+	int a, b;
+	while(1){
+		printf("Informe 2 numeros:\n");
+		scanf("%d %d", &a, &b);
+		if(a != b){
+			duplaCrescente(&a, &b);
+			printf("%d %d\n", a, b);
+		} else{
+			exit(0);
+		}
+	}
 	return 0;
+}
+
+void duplaCrescente(int *a, int *b){
+	int aux;
+
+	if(*a > *b){
+		aux = *a;
+		*a = *b;
+		*b = aux;
+	}
 }
