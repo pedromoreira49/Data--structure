@@ -6,4 +6,6 @@ typedef struct {
 
 } Horario;
 
+int convertTime(Horario *dados);
+
 #endif
