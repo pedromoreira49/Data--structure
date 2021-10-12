@@ -15,6 +15,5 @@ void retiraConta(Conta *conta, float valor){
 }
 
 float obtemSaldo(Conta *conta){
-	printf("%.2f\n", conta->saldo);
 	return conta->saldo;
 }
