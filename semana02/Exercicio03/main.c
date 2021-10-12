@@ -2,7 +2,11 @@
 #include <stdlib.h>
 #include "conta.c"
 
-int printMenu(int op);
+/*Exercicio: 2.3
+Defina o tipo Conta para armazenar o numero de uma conta e seu respectivo saldo.
+Escreva um programa para controlar a conta corrente e a conta poupança do sr.Silva. As contas são integradas de forma que quando não houver saldo suficiente na conta corrente uma transferência automática da conta poupança cobrirá um evental saldo (o valor da transferência deve ser igual ao valor necessário para cobrir o saldo negativo).
+O programa deve ler o número e o saldo inicial da conta corrente e da poupança criando duas variáveis do tipo Conta (cada uma representa uma conta). A seguir ler uma quantidade indeterminada de duplas de dados representando respectivamente o código da operação (1.Depósito conta corrente 2.Depósito conta poupança 3.Retirada conta corrente 4.Retirada conta poupança 5.Fim) e o valor do movimento. O programa termina ao ser informado um código igual a 5 (nesta situação o valor do movimento não deve ser lido).
+*/
 
 int main(){
 
@@ -60,6 +64,9 @@ int main(){
 			case 5:
 				printf("Escolhido: Sair.\n");
 				exit(0);
+				break;
+			default:
+				printf("Opcao invalida\n");
 				break;
 		}
 	}
