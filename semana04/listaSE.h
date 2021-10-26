@@ -25,7 +25,7 @@ typedef struct{
 void criaLista(ListaSE *lt);
 void exibe(ListaSE lt);
 int estaVazia(ListaSE lt);
-int incluiNoFim(ListaSE *lt, Dado *d);
+int incluiNoFim(ListaSE *lt, Dado d);
 int incluiDepois(ListaSE *lt, Dado *d, int cod);
 int consultaPorCodigo(ListaSE lt, Dado *d, int cod);
 int incluiNoInicio(ListaSE *lt, Dado *d);
