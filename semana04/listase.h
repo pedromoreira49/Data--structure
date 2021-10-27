@@ -1,5 +1,5 @@
-#ifndef listaSE_H
-#define listaSE_H
+#ifndef LISTASE_H
+#define ListaSE_H
 
 #define SUCESSO 0
 #define LISTA_VAZIA 1
@@ -28,8 +28,9 @@ int estaVazia(ListaSE lt);
 int incluiNoFim(ListaSE *lt, Dado d);
 int incluiDepois(ListaSE *lt, Dado *d, int cod);
 int consultaPorCodigo(ListaSE lt, Dado *d, int cod);
-int incluiNoInicio(ListaSE *lt, Dado *d);
+int incluiNoInicio(ListaSE *lt, Dado d);
 int quantidadeDeNodos(ListaSE lt);
 int excluiDoInicio(ListaSE *lt, Dado d);
 int excluiNodo(ListaSE *lt, Dado *d, int cod);
 
+#endif

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "listaSE.h"
+#include "listase.h"
 
 void criaLista(ListaSE *lt){
 	lt->inicio = NULL;
@@ -16,7 +16,7 @@ void exibe(ListaSE lt){
 }
 
 int estaVazia(ListaSE lt){
-	if(lt->inicio == NULL)
+	if(lt.inicio == NULL)
 		return LISTA_VAZIA;
 	else
 		return 0;
@@ -29,13 +29,13 @@ int incluiNoFim(ListaSE *lt, Dado d){
 	if(pNodo == NULL)
 		return FALTOU_MEMORIA;
 	else {
-		pAux = lt.inicio;
-		while(pAux != NULL){
+		pAux = lt->inicio;
+		while(pAux->prox != NULL){
 			pAux = pAux->prox;
 		}
-		pAux->prox = pNodo;
 		pNodo->info = d;
-		pNodo->prox = NULL; 
+		pNodo->prox = NULL;
+		pAux->prox = pNodo;
 		return SUCESSO;
 	}
 
