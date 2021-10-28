@@ -28,7 +28,12 @@ int incluiNoFim(ListaSE *lt, Dado d){
 	pNodo = (Nodo *) malloc (sizeof(Nodo));
 	if(pNodo == NULL)
 		return FALTOU_MEMORIA;
-	else {
+	else if(lt->inicio == NULL){
+		pNodo->info = d;
+		pNodo->prox = NULL;
+		lt->inicio = pNodo;
+		SUCESSO;
+	}else {
 		pAux = lt->inicio;
 		while(pAux->prox != NULL){
 			pAux = pAux->prox;
@@ -53,5 +58,17 @@ int incluiNoInicio(ListaSE *lt, Dado d){
 		lt->inicio = pNodo;
 		return SUCESSO;
 	}
+}
+
+int quantidadeDeNodos(ListaSE lt){
+	int conta = 0;
+	Nodo *pAux;
+
+	pAux = lt.inicio;
+	while(pAux != NULL){
+		conta++;
+		pAux = pAux->prox;
+	}
+	return(conta);
 }
 
