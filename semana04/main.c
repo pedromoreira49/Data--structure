@@ -15,7 +15,11 @@ int main(){
 				exibe(lt);
 				break;
 			case 2:
-				estaVazia(lt);
+				if(estaVazia(lt)==LISTA_VAZIA){
+					printf("Lista vazia\n");
+				}else{
+					printf("Lista possui conteudo\n");
+				}
 				break;
 			case 3:
 				printf("Informe o cod:\n");
@@ -40,6 +44,9 @@ int main(){
 				}
 				break;
 		}
+			if(chose != 1){
+				exibe(lt);
+			}
 	}while(chose != 5);
 
 	return 0;
