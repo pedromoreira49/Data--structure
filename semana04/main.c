@@ -8,7 +8,12 @@ int main(){
 	criaLista(&lt);
 	int chose;
 	do {
-		printf("MENU:\n1-exibe\n2-esta vazia\n3-Inclui no fim\n4-Inclui no inicio\n");
+		printf("MENU:\n");
+		printf("0.Fim                       5.Exclui do inicio    10.Exclui nodo\n");
+		printf("1.Inclui no inicio          6.Inclui no fim\n");
+		printf("2.Exibe lista	            7.Exclui do fim\n");
+		printf("3.Quantidade de nodos	    8.Consulta por codigo\n");
+		printf("4.Exibe situacao da lista   9.Inclui depois\n");
 		scanf("%d", &chose);
 		switch(chose){
 			case 1:
