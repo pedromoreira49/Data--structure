@@ -10,7 +10,7 @@ void exibe(ListaSE lt){
 
 	pAux = lt.inicio;
 	while(pAux != NULL){
-		printf("%d %f\n", pAux->info.cod, pAux->info.peso);
+		printf("EndNodo:%p - cod:%3d - peso:%.2f - ProxEnd:%p\n", pAux, pAux->info.cod, pAux->info.peso, pAux->prox);
 		pAux = pAux->prox;
 	}
 }
