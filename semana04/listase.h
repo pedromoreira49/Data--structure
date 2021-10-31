@@ -30,7 +30,8 @@ int incluiDepois(ListaSE *lt, Dado *d, int cod);
 int consultaPorCodigo(ListaSE lt, Dado *d, int cod);
 int incluiNoInicio(ListaSE *lt, Dado d);
 int quantidadeDeNodos(ListaSE lt);
-int excluiDoInicio(ListaSE *lt, Dado d);
+int excluiDoInicio(ListaSE *lt, Dado *d);
+int excluiDoFim(ListaSE *lt);
 int excluiNodo(ListaSE *lt, Dado *d, int cod);
 
 #endif

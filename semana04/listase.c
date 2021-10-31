@@ -72,6 +72,15 @@ int quantidadeDeNodos(ListaSE lt){
 	return(conta);
 }
 
-int excluiDoInicio(){
-
+int excluiDoInicio(ListaSE *lt, Dado *d){
+	Nodo *pTemp;
+	if(lt->inicio==NULL){
+		return LISTA_VAZIA;
+	}else{
+		*d = lt->inicio->info;
+		pTemp = lt->inicio;
+		lt->inicio = lt->inicio->prox;
+		free(pTemp);
+		return SUCESSO;
+	}
 }

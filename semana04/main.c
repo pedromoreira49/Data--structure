@@ -17,27 +17,6 @@ int main(){
 		scanf("%d", &chose);
 		switch(chose){
 			case 1:
-				exibe(lt);
-				break;
-			case 2:
-				if(estaVazia(lt)==LISTA_VAZIA){
-					printf("Lista vazia\n");
-				}else{
-					printf("Lista possui conteudo\n");
-				}
-				break;
-			case 3:
-				printf("Informe o cod:\n");
-				scanf("%d", &d.cod);
-				printf("Informe o peso:\n");
-				scanf("%f", &d.peso);
-				if(incluiNoFim(&lt, d)== FALTOU_MEMORIA){
-					printf("ERRO: Faltou memoria\n");
-				} else{
-					printf("SUCESSO\n");
-				}
-				break;
-			case 4:
 				printf("Informe o cod:\n");
 				scanf("%d", &d.cod);
 				printf("Informe o peso:\n");
@@ -48,11 +27,54 @@ int main(){
 					printf("SUCESSO\n");
 				}
 				break;
+			case 2:
+				exibe(lt);
+				break;
+			case 3:
+				quantidadeDeNodos(lt);
+				break;
+			case 4:
+				if(estaVazia(lt)==LISTA_VAZIA){
+					printf("Lista vazia\n");
+				}else{
+					printf("Lista possui conteudo\n");
+				}
+				break;
+			case 5:
+				if(excluiDoInicio(&lt, &d)==LISTA_VAZIA){
+					printf("Lista vazia\n");
+				}else{
+					printf("SUCESSO\n");
+				}
+				break;
+			case 6:
+				printf("Informe o cod:\n");
+				scanf("%d", &d.cod);
+				printf("Informe o peso:\n");
+				scanf("%f", &d.peso);
+				if(incluiNoFim(&lt, d)== FALTOU_MEMORIA){
+					printf("ERRO: Faltou memoria\n");
+				} else{
+					printf("SUCESSO\n");
+				}
+				break;
+			case 7:
+				//exclui do fim
+				break;
+			case 8:
+				//consulta por codigo
+				break;
+			case 9:
+				//inclui depois
+				break;
+			case 10:
+				//exclui nodo
+				break;
 		}
 			if(chose != 1){
 				exibe(lt);
 			}
-	}while(chose != 5);
+	}while(chose != 0);
 
 	return 0;
 }
