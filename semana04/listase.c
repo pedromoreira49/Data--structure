@@ -72,3 +72,6 @@ int quantidadeDeNodos(ListaSE lt){
 	return(conta);
 }
 
+int excluiDoInicio(){
+
+}
