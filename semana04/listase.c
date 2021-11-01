@@ -84,3 +84,26 @@ int excluiDoInicio(ListaSE *lt, Dado *d){
 		return SUCESSO;
 	}
 }
+
+int excluiDoFim(ListaSE *lt, Dado *d){
+	Nodo *pTemp;
+	Nodo *pAux;
+	Nodo *pNodo;
+	if(lt->inicio==NULL){
+		return LISTA_VAZIA;
+	}else{
+		pAux = lt->inicio;
+		while(pAux->prox != NULL){
+			pAux = pAux->prox;
+		}
+		pNodo = lt->inicio;
+		while(pNodo->prox != pAux){
+			pNodo = pNodo->prox;
+		}
+		*d = pAux->info;
+		pTemp = pNodo->prox;
+		pNodo->prox = NULL;
+		free(pTemp);
+		return SUCESSO;
+	}
+}
