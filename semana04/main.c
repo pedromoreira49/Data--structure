@@ -59,7 +59,11 @@ int main(){
 				}
 				break;
 			case 7:
-				//exclui do fim
+				if(excluiDoFim(&lt, &d)==LISTA_VAZIA){
+					printf("Memoria vazia\n");
+				}else{
+					printf("SUCESSO\n");
+				}
 				break;
 			case 8:
 				//consulta por codigo
