@@ -6,7 +6,7 @@ int main(){
 	Dado d;
 	ListaSE lt;
 	criaLista(&lt);
-	int chose;
+	int chose, cod;
 	do {
 		printf("MENU:\n");
 		printf("0.Fim                       5.Exclui do inicio    10.Exclui nodo\n");
@@ -66,7 +66,13 @@ int main(){
 				}
 				break;
 			case 8:
-				//consulta por codigo
+				printf("Informe o codigo:\n");
+				scanf("%d", &cod);
+				if(consultaPorCodigo(lt, cod)==LISTA_VAZIA){
+					printf("Lista vazia\n");
+				}else{
+					printf("SUCESSO\n");
+				}
 				break;
 			case 9:
 				//inclui depois
@@ -75,7 +81,7 @@ int main(){
 				//exclui nodo
 				break;
 		}
-			if(chose != 1){
+			if(chose != 2 && chose != 8){
 				exibe(lt);
 			}
 	}while(chose != 0);
