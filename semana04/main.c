@@ -75,7 +75,17 @@ int main(){
 				}
 				break;
 			case 9:
-				//inclui depois
+				printf("Informe o codigo:\n");
+				scanf("%d", &d.cod);
+				printf("Informe o peso:\n");
+				scanf("%f", &d.peso);
+				printf("Informe o codigo anterior:\n");
+				scanf("%d", &cod);
+				if(incluiDepois(&lt, d, cod)==FALTOU_MEMORIA){
+					printf("ERRO: Memoria insuficiente\n");
+				}else{
+					printf("SUCESSO\n");
+				}
 				break;
 			case 10:
 				//exclui nodo
