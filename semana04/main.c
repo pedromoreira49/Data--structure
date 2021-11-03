@@ -31,7 +31,7 @@ int main(){
 				exibe(lt);
 				break;
 			case 3:
-				quantidadeDeNodos(lt);
+				printf("Quantidade de Nodos: %d\n", quantidadeDeNodos(lt));
 				break;
 			case 4:
 				if(estaVazia(lt)==LISTA_VAZIA){
