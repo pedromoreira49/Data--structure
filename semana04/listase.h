@@ -32,6 +32,6 @@ int incluiNoInicio(ListaSE *lt, Dado d);
 int quantidadeDeNodos(ListaSE lt);
 int excluiDoInicio(ListaSE *lt, Dado *d);
 int excluiDoFim(ListaSE *lt, Dado *d);
-int excluiNodo(ListaSE *lt, int cod);
+int excluiNodo(ListaSE *lt, Dado *d, int cod);
 
 #endif
