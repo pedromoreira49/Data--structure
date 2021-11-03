@@ -107,3 +107,30 @@ int excluiDoFim(ListaSE *lt, Dado *d){
 		return SUCESSO;
 	}
 }
+/*
+int excluiNodo(ListaSE *lt, Dado d){
+	Nodo *pNodo;
+	if(lt->inicio == NULL){
+		return LISTA_VAZIA;
+	}else{
+		pNodo = lt->inicio;
+		while(d != pNodo->info->cod){
+			pNodo = pNodo->info->cod;
+		}
+		
+	}
+}
+*/
+int consultaPorCodigo(ListaSE lt, int cod){
+	Nodo *pNodo;
+	if(lt.inicio == NULL){
+		return LISTA_VAZIA;
+	}else{
+		pNodo = lt.inicio;
+		while(pNodo->info.cod != cod){
+			pNodo = pNodo->prox;
+		}
+		printf("EndNodo:%p - cod:%3d - peso:%.2f - ProxEnd:%p\n", pNodo, pNodo->info.cod, pNodo->info.peso, pNodo->prox);
+		return SUCESSO;
+	}
+}
