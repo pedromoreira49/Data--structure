@@ -88,7 +88,13 @@ int main(){
 				}
 				break;
 			case 10:
-				//exclui nodo
+				printf("Informe o codigo do nodo a ser excluido:\n");
+				scanf("%d", &cod);
+				if(excluiNodo(&lt, &d, cod)==LISTA_VAZIA){
+					printf("Lista vazia\n");
+				}else{
+					printf("SUCESSO\n");
+				}
 				break;
 		}
 			if(chose != 2 && chose != 8){
