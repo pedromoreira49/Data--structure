@@ -26,12 +26,12 @@ void criaLista(ListaSE *lt);
 void exibe(ListaSE lt);
 int estaVazia(ListaSE lt);
 int incluiNoFim(ListaSE *lt, Dado d);
-int incluiDepois(ListaSE *lt, Dado *d, int cod);
+int incluiDepois(ListaSE *lt, Dado d, int cod);
 int consultaPorCodigo(ListaSE lt, int cod);
 int incluiNoInicio(ListaSE *lt, Dado d);
 int quantidadeDeNodos(ListaSE lt);
 int excluiDoInicio(ListaSE *lt, Dado *d);
 int excluiDoFim(ListaSE *lt, Dado *d);
-int excluiNodo(ListaSE *lt, Dado *d, int cod);
+int excluiNodo(ListaSE *lt, int cod);
 
 #endif
