@@ -31,6 +31,13 @@ int main(){
 					exibe(pl);
 				}
 				break;
+			case 2:
+				if(desempilha(&pl, &d)==PILHA_VAZIA){
+					printf("ERRO: Pilha vazia\n");
+				}else{
+					printf("SUCESSO\n");
+					exibe(pl);
+				}
 		}
 
 	}while(op != 0);

@@ -23,7 +23,7 @@ typedef struct {
 
 void criaPilha(Pilha *pl);
 int empilha(Pilha *pl, Dado d);
-int desempilha(Pilha *pl, Dado d);
+int desempilha(Pilha *pl, Dado *d);
 int estaVazia(Pilha pl);
 int consultaTopo(Pilha pl);
 void exibe(Pilha pl);

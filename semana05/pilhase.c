@@ -32,3 +32,19 @@ int empilha(Pilha *pl, Dado d){
 		return SUCESSO;
 	}
 }
+
+
+int desempilha(Pilha *pl, Dado *d){
+	Nodo *pNodo;
+	Nodo *pTemp;
+	pTemp = pl->topo;
+	if(pTemp == NULL){
+		return PILHA_VAZIA;
+	}else{
+		pNodo = pTemp->prox;
+		*d = pTemp->info;
+		pl->topo = pNodo;
+		free(pTemp);
+		return SUCESSO;
+	}
+}
