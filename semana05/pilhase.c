@@ -6,6 +6,15 @@ void criaPilha(Pilha *pl){
 	pl->topo = NULL;
 }
 
+void exibe(Pilha pl){
+	Nodo *pNodo;
+	pNodo = pl.topo;
+	while(pNodo != NULL){
+		printf("EndNodo: %p - cod: %d - peso: %.2f - proxEnd: %p\n", pNodo, pNodo->info.cod, pNodo->info.peso, pNodo->prox);
+		pNodo = pNodo->prox;
+	}
+}
+
 int empilha(Pilha *pl, Dado d){
 	Nodo *pNodo;
 	pNodo = (Nodo *) malloc (sizeof(Nodo));

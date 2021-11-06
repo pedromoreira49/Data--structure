@@ -28,6 +28,7 @@ int main(){
 					printf("ERRO: Faltou memoria\n");
 				}else{
 					printf("SUCESSO\n");
+					exibe(pl);
 				}
 				break;
 		}
