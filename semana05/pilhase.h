@@ -1,5 +1,5 @@
-#ifndef pilhase.h
-#define pilhase.h
+#ifndef PILHASE_H
+#define PilhaSE_H
 
 #define SUCESSO 0
 #define PILHA_VAZIA 1
@@ -12,7 +12,7 @@ typedef struct {
 
 typedef struct nodo Nodo;
 
-struct Nodo {
+struct nodo {
 	Dado info;
 	Nodo *prox;
 };

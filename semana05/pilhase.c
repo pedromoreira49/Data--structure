@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "pilhase.h"
+#include <stdlib.h>
 
 void criaPilha(Pilha *pl){
 	pl->topo = NULL;
@@ -18,7 +19,7 @@ int empilha(Pilha *pl, Dado d){
 	}else {
 		pNodo->info = d;
 		pNodo->prox = pl->topo;
-		pl->topo = pNodo
+		pl->topo = pNodo;
 		return SUCESSO;
 	}
 }

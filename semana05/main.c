@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include "listase.c"
+#include "pilhase.c"
+#include <stdlib.h>
 
 int main(){
 
@@ -9,7 +10,7 @@ int main(){
 	criaPilha(&pl);
 
 	do{
-		printf("MENU:\n);
+		printf("MENU:\n");
 		printf("0.Fim        3.Quantidade de nodos\n");
 		printf("1.Empinha    4.Exibe situação da lista\n");
 		printf("2.Desempilha 5.Consulta topo\n");
@@ -23,14 +24,15 @@ int main(){
 				scanf("%d", &d.cod);
 				printf("Informe o peso:\n");
 				scanf("%f", &d.peso);
-				if(empilhar(&pl, d)==FALTOU_MEMORIA){
+				if(empilha(&pl, d)==FALTOU_MEMORIA){
 					printf("ERRO: Faltou memoria\n");
 				}else{
 					printf("SUCESSO\n");
 				}
+				break;
 		}
 
-	}
+	}while(op != 0);
 
 	return 0;
 }
