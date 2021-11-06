@@ -12,7 +12,7 @@ int main(){
 	do{
 		printf("MENU:\n");
 		printf("0.Fim        3.Quantidade de nodos\n");
-		printf("1.Empinha    4.Exibe situação da lista\n");
+		printf("1.Empilha    4.Exibe situação da lista\n");
 		printf("2.Desempilha 5.Consulta topo\n");
 		scanf("%d", &op);
 		switch(op){
