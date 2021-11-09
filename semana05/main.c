@@ -48,6 +48,14 @@ int main(){
 				}else{
 					printf("Pilha possui um ou mais nodos\n");
 				}
+				break;
+			case 5:
+				if(consultaTopo(pl)==PILHA_VAZIA){
+					printf("Pilha vazia\n");
+				}else{
+					printf("SUCESSO\n");
+				}
+				break;
 		}
 
 	}while(op != 0);
