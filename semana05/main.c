@@ -40,7 +40,7 @@ int main(){
 				}
 				break;
 			case 3:
-				//quantidade de nodos;
+				printf("Quantidade no nodos: %d\n", quantidadeDeNodos(pl));
 				break;
 			case 4:
 				if(estaVazia(pl)==PILHA_VAZIA){
