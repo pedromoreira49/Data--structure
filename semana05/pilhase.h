@@ -27,5 +27,6 @@ int desempilha(Pilha *pl, Dado *d);
 int estaVazia(Pilha pl);
 int consultaTopo(Pilha pl);
 void exibe(Pilha pl);
+int quantidadeDeNodos(Pilha pl);
 
 #endif
