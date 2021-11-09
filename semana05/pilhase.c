@@ -48,3 +48,11 @@ int desempilha(Pilha *pl, Dado *d){
 		return SUCESSO;
 	}
 }
+
+int estaVazia(Pilha pl){
+	if(pl.topo == NULL){
+		return PILHA_VAZIA;
+	}else{
+		return 0;
+	}
+}
