@@ -56,3 +56,14 @@ int estaVazia(Pilha pl){
 		return 0;
 	}
 }
+
+int consultaTopo(Pilha pl){
+	Nodo *pNodo;
+	pNodo = pl.topo;
+	if(pNodo == NULL){
+		return PILHA_VAZIA;
+	}else{
+		printf("EndNodo: %p - cod: %d - peso: %.2f - proxEnd: %p\n", pNodo, pNodo->info.cod, pNodo->info.peso, pNodo->prox);
+		return SUCESSO;
+	}
+}
