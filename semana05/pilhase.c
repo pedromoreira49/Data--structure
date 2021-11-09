@@ -67,3 +67,15 @@ int consultaTopo(Pilha pl){
 		return SUCESSO;
 	}
 }
+
+int quantidadeDeNodos(Pilha pl){
+	int cont = 0;
+	Nodo *pNodo;
+
+	pNodo = pl.topo;
+	while(pNodo != NULL){
+		cont++;
+		pNodo = pNodo->prox;
+	}
+	return(cont);
+}
