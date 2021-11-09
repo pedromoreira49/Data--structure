@@ -38,6 +38,16 @@ int main(){
 					printf("SUCESSO\n");
 					exibe(pl);
 				}
+				break;
+			case 3:
+				//quantidade de nodos;
+				break;
+			case 4:
+				if(estaVazia(pl)==PILHA_VAZIA){
+					printf("Pilha vazia\n");
+				}else{
+					printf("Pilha possui um ou mais nodos\n");
+				}
 		}
 
 	}while(op != 0);
