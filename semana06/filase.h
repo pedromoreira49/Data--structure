@@ -26,4 +26,4 @@ void criaFila(Fila *fl);
 int insere(Fila *fl, Dado d);
 int retira(Fila *fl, Dado *d);
 int estaVazia(Fila fl);
-int consulta(Fila *fl, Dado d);
+int consulta(Fila *fl, Dado *d);
