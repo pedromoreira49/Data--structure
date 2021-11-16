@@ -28,11 +28,18 @@ int main(){
 				}else{
 					printf("SUCESSO\n");
 				}
+				exibeFila(fl);
 				break;
 			case 2:
-				
+				if(retira(&fl, &d)==FILA_VAZIA){
+					printf("ERRO: Fila vazia\n");
+				}else{
+					printf("SUCESSO\n");
+				}
+				exibeFila(fl);
+				break;
 		}
-	}
+	}while(op != 0);
 
 	return 0;
 }

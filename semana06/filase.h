@@ -12,7 +12,7 @@ typedef struct {
 
 typedef struct nodo Nodo;
 
-struct Nodo {
+struct nodo {
 	Dado info;
 	Nodo *prox;
 };
@@ -27,3 +27,6 @@ int insere(Fila *fl, Dado d);
 int retira(Fila *fl, Dado *d);
 int estaVazia(Fila fl);
 int consulta(Fila *fl, Dado *d);
+void exibeFila(Fila fl);
+
+#endif

@@ -13,26 +13,26 @@ int insere(Fila *fl, Dado d){
 	pNodo = (Nodo *) malloc (sizeof(Nodo));
 	if(pNodo == NULL){
 		return FALTOU_MEMORIA;
-	}else if(fl.frente == NULL){
+	}else if(fl->frente == NULL){
 		pNodo->info = d;
 		pNodo->prox = NULL;
-		fl.frente = pNodo;
-		fl.re = pNodo;
+		fl->frente = pNodo;
+		fl->re = pNodo;
 		return SUCESSO;
 	}else{
 		pNodo->info = d;
 		pNodo->prox = NULL;
-		pAux = fl.frente;
+		pAux = fl->frente;
 		while(pAux->prox != NULL){
 			pAux = pAux->prox;
 		}
 		pAux->prox = pNodo;
-		fl.re = pNodo;
+		fl->re = pNodo;
 		return SUCESSO;
 	}
 }
 
-int retira(Fila *f, Dado *d){
+int retira(Fila *fl, Dado *d){
 	Nodo *pNodo;
 	Nodo *pTemp;
 	pTemp = fl->frente;
@@ -46,4 +46,13 @@ int retira(Fila *f, Dado *d){
 		return SUCESSO;
 	}
 
+}
+
+void exibeFila(Fila fl){
+	Nodo *pNodo;
+	pNodo = fl.frente;
+	while(pNodo != NULL){
+		printf("EndNodo: %x - cod: %d - peso: %.2f - proxEnd: %x\n", pNodo, pNodo->info.cod, pNodo->info.peso, pNodo->prox);
+		pNodo = pNodo->prox;
+	}
 }
