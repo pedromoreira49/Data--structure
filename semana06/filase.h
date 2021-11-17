@@ -26,7 +26,8 @@ void criaFila(Fila *fl);
 int insere(Fila *fl, Dado d);
 int retira(Fila *fl, Dado *d);
 int estaVazia(Fila fl);
-int consulta(Fila *fl, Dado *d);
+int quantidadeDeNodos(Fila fl);
+int consultaFrente(Fila fl);
 void exibeFila(Fila fl);
 
 #endif
