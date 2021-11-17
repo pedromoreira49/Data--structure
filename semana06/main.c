@@ -41,6 +41,13 @@ int main(){
 			case 3:
 				printf("Quantidade de nodos: %d\n", quantidadeDeNodos(fl));
 				break;
+			case 4:
+				if(estaVazia(fl) == FILA_VAZIA){
+					printf("Fila vazia\n");
+				}else{
+					printf("Fila possui 1 ou mais nodos\n");
+				}
+				break;
 		}
 	}while(op != 0);
 
