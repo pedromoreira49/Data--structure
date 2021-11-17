@@ -75,6 +75,7 @@ int consultaFrente(Fila fl){
 	if(pNodo == NULL){
 		return FILA_VAZIA;
 	}else{
+		printf("EndNodo: %x - cod: %d - peso: %.2f - proxEnd: %x\n", pNodo, pNodo->info.cod, pNodo->info.peso, pNodo->prox);
 		return SUCESSO;
 	}
 }
