@@ -48,6 +48,13 @@ int main(){
 					printf("Fila possui 1 ou mais nodos\n");
 				}
 				break;
+			case 5:
+				if(consultaFrente(fl) == FILA_VAZIA){
+					printf("ERRO: Fila vazia\n");
+				}else{
+					printf("SUCESSO\n");
+				}
+				break;
 		}
 	}while(op != 0);
 
