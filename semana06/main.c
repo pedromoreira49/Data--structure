@@ -38,6 +38,9 @@ int main(){
 				}
 				exibeFila(fl);
 				break;
+			case 3:
+				printf("Quantidade de nodos: %d\n", quantidadeDeNodos(fl));
+				break;
 		}
 	}while(op != 0);
 
