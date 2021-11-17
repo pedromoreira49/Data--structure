@@ -78,3 +78,11 @@ int consultaFrente(Fila fl){
 		return SUCESSO;
 	}
 }
+
+int estaVazia(Fila fl){
+	if(fl.frente == NULL){
+		return FILA_VAZIA;
+	}else{
+		return SUCESSO;
+	}
+}
