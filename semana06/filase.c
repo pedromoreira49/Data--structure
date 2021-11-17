@@ -68,3 +68,13 @@ int quantidadeDeNodos(Fila fl){
 	}
 	return(cont);
 }
+
+int consultaFrente(Fila fl){
+	Nodo *pNodo;
+	pNodo = fl.frente;
+	if(pNodo == NULL){
+		return FILA_VAZIA;
+	}else{
+		return SUCESSO;
+	}
+}
