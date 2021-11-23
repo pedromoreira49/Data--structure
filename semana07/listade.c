@@ -7,11 +7,11 @@ void criaLista(Listade *lt){
 	lt->n = 0;
 }
 
-void exibeLista(){
+void exibeLista(Listade lt){
 	Nodo *pAux;
 	pAux = lt.inicio;
 	while(pAux != NULL){
-		printf("EndNodo: %x - EndAnt: %x -  cod: %3d - peso: %.2f - ProxEnd: %x\n", pAux, pAux->ant, pAux->info.cod, pAux->info.peso, pAux->prox;);
+		printf("EndNodo: %x - EndAnt: %x -  cod: %3d - peso: %.2f - ProxEnd: %x\n", pAux, pAux->ant, pAux->info.cod, pAux->info.peso, pAux->prox);
 		pAux = pAux->prox;
 	}
 }
@@ -30,7 +30,7 @@ int incluiNoInicio(Listade *lt, Dado d){
 		}else{
 			lt->inicio->ant = pNodo;
 		}
-		lt-inicio = pNodo;
+		lt->inicio = pNodo;
 		lt->n++;
 		return SUCESSO;
 	}
