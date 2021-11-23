@@ -54,3 +54,7 @@ int excluiDoInicio(Listade *lt, Dado *d){
 		return SUCESSO;
 	}
 }
+
+int quantidadeDeNodos(Listade lt){
+	return lt.n;
+}
