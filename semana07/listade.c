@@ -58,3 +58,11 @@ int excluiDoInicio(Listade *lt, Dado *d){
 int quantidadeDeNodos(Listade lt){
 	return lt.n;
 }
+
+int estaVazia(Listade lt){
+	if(lt.inicio == NULL && lt.fim == NULL){
+		return LISTA_VAZIA;
+	}else{
+		return SUCESSO;
+	}
+}
