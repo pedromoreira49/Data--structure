@@ -15,6 +15,7 @@ typedef struct nodo Nodo;
 
 struct nodo {
 	Dado info;
+	Nodo *ant;
 	Nodo *prox;
 };
 
@@ -24,7 +25,7 @@ typedef struct {
 	Nodo n;
 } Listade;
 
-void criaLista(Listade lt);
+void criaLista(Listade *lt);
 void exibe(Listade lt);
 int estaVazia(Listade lt);
 int quantidadeDeNodos(Listade lt);
