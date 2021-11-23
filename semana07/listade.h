@@ -22,11 +22,11 @@ struct nodo {
 typedef struct {
 	Nodo *inicio;
 	Nodo *fim;
-	Nodo n;
+	int n;
 } Listade;
 
 void criaLista(Listade *lt);
-void exibe(Listade lt);
+void exibeLista(Listade lt);
 int estaVazia(Listade lt);
 int quantidadeDeNodos(Listade lt);
 int incluiNoInicio(Listade *lt, Dado d);
