@@ -33,6 +33,9 @@ int main(){
 				}
 				exibeLista(lt);
 				break;
+			case 3:
+				printf("Quantidade de nodos: %d\n", quantidadeDeNodos(lt));
+				break;
 			case 5:
 				if(excluiDoInicio(&lt, &d) == LISTA_VAZIA){
 					printf("Erro: Lista vazia\n");
