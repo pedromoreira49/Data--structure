@@ -74,6 +74,16 @@ int main(){
 				}
 				exibeLista(lt);
 				break;
+			case 8:
+				printf("Informe o codigo:\n");
+				scanf("%d", &cod);
+				if(consultaPorCodigo(lt, cod, &d)==CODIGO_INEXISTENTE){
+					printf("Erro: codigo inexistente\n");
+				}else{
+					printf("SUCESSO\n");
+					printf("Codigo: %d - Peso: %.2f\n", d.cod, d.peso);
+				}
+				break;
 		}
 	}while(op != 0);
 	return 0;
