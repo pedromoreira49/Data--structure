@@ -125,3 +125,38 @@ int consultaPorCodigo(Listade lt, int cod, Dado *d){
 	*d = pNodo->info;
 	return SUCESSO;
 }
+
+int incluiDepois(Listade *lt, Dado d, int cod){
+	Nodo *pNodo;
+	Nodo *pAux;
+	pNodo = (Nodo *) malloc(sizeof(Nodo));
+	if(pNodo == NULL){
+		return FALTOU_MEMORIA;
+	}else if(lt->n == 0){
+		return LISTA_VAZIA;
+	}else{
+		pAux = lt->inicio;
+		pNodo->info = d;
+		while(pAux->info.cod != cod){
+			if(pAux->prox == NULL){
+				free(pNodo);
+				return CODIGO_INEXISTENTE;
+			}
+			pAux = pAux->prox;
+		}
+		if(pAux->prox == NULL){
+			pAux->prox = pNodo;
+			lt->fim = pNodo;
+			pNodo->prox = NULL;
+			pNodo->ant = pAux;
+			lt->n++;
+			return SUCESSO;
+		}
+		pNodo->ant = pAux;
+		pNodo->prox = pAux->prox;
+		pAux->prox->ant = pNodo;
+		pAux->prox = pNodo;
+		lt->n++;
+		return SUCESSO;
+	}
+}
