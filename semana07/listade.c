@@ -9,7 +9,12 @@ void criaLista(Listade *lt){
 
 void exibeLista(Listade lt){
 	Nodo *pAux;
+	Nodo *_pAux;
+	int __pAux;
 	pAux = lt.inicio;
+	_pAux = lt.fim;
+	__pAux = lt.n;
+	printf("Inicio: %x - N: %d - Fim: %x\n", pAux, __pAux, _pAux);
 	while(pAux != NULL){
 		printf("EndNodo: %x - EndAnt: %x -  cod: %3d - peso: %.2f - ProxEnd: %x\n", pAux, pAux->ant, pAux->info.cod, pAux->info.peso, pAux->prox);
 		pAux = pAux->prox;
@@ -84,6 +89,25 @@ int incluiNoFim(Listade *lt, Dado d){
 		}
 		lt->fim = pNodo;
 		lt->n++;
+		return SUCESSO;
+	}
+}
+
+int excluiDoFim(Listade *lt, Dado *d){
+	Nodo *pNodo;
+	if(lt->n == 0){
+		return LISTA_VAZIA;
+	}else{
+		*d = lt->fim->info;
+		pNodo = lt->fim;
+		lt->fim = lt->fim->ant;
+		if(lt->n == 1){
+			lt->inicio = NULL;
+		}else{
+			lt->inicio->prox = NULL;
+		}
+		lt->n--;
+		free(pNodo);
 		return SUCESSO;
 	}
 }
