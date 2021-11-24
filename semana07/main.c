@@ -84,6 +84,20 @@ int main(){
 					printf("Codigo: %d - Peso: %.2f\n", d.cod, d.peso);
 				}
 				break;
+			case 9:
+				printf("Informe o codigo:\n");
+				scanf("%d", &d.cod);
+				printf("Informe o peso:\n");
+				scanf("%f", &d.peso);
+				printf("Informe o codigo a ser procurado\n");
+				scanf("%d", &cod);
+				if(incluiDepois(&lt, d, cod)==FALTOU_MEMORIA){
+					printf("Erro: Faltou memoria\n");
+				}else{
+					printf("SUCESSO\n");
+				}
+				exibeLista(lt);
+				break;
 		}
 	}while(op != 0);
 	return 0;
