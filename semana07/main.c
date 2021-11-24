@@ -51,6 +51,18 @@ int main(){
 				}
 				exibeLista(lt);
 				break;
+			case 6:
+				printf("Informe o codigo:\n");
+				scanf("%d", &d.cod);
+				printf("Informe o peso:\n");
+				scanf("%f", &d.peso);
+				if(incluiNoFim(&lt, d) == FALTOU_MEMORIA){
+					printf("Erro: Faltou memoria\n");
+				}else{
+					printf("SUCESSO\n");
+				}
+				exibeLista(lt);
+				break;
 		}
 	}while(op != 0);
 	return 0;
