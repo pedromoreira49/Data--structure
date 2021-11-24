@@ -33,6 +33,9 @@ int main(){
 				}
 				exibeLista(lt);
 				break;
+			case 2:
+				exibeLista(lt);
+				break;
 			case 3:
 				printf("Quantidade de nodos: %d\n", quantidadeDeNodos(lt));
 				break;
@@ -58,6 +61,14 @@ int main(){
 				scanf("%f", &d.peso);
 				if(incluiNoFim(&lt, d) == FALTOU_MEMORIA){
 					printf("Erro: Faltou memoria\n");
+				}else{
+					printf("SUCESSO\n");
+				}
+				exibeLista(lt);
+				break;
+			case 7:
+				if(excluiDoFim(&lt, &d)==LISTA_VAZIA){
+					printf("Erro: Lista vazia\n");
 				}else{
 					printf("SUCESSO\n");
 				}
