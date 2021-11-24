@@ -66,3 +66,24 @@ int estaVazia(Listade lt){
 		return SUCESSO;
 	}
 }
+
+int incluiNoFim(Listade *lt, Dado d){
+	Nodo *pNodo;
+	pNodo = (Nodo *) malloc(sizeof(Nodo));
+	if(pNodo == NULL){
+		return FALTOU_MEMORIA;
+	}else{
+		pNodo->info = d;
+		pNodo->prox = NULL;
+		if(lt->n == 0){
+			pNodo->ant = NULL;
+			lt->inicio = pNodo;
+		}else{
+			lt->fim->prox = pNodo;
+			pNodo->ant = lt->fim;
+		}
+		lt->fim = pNodo;
+		lt->n++;
+		return SUCESSO;
+	}
+}
