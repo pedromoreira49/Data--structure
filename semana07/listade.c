@@ -111,3 +111,17 @@ int excluiDoFim(Listade *lt, Dado *d){
 		return SUCESSO;
 	}
 }
+
+int consultaPorCodigo(Listade lt, int cod, Dado *d){
+	Nodo *pNodo;
+
+	pNodo = lt.inicio;
+	while(pNodo->info.cod != cod){
+		if(pNodo->prox == NULL){
+			return CODIGO_INEXISTENTE;
+		}
+		pNodo = pNodo->prox;
+	}
+	*d = pNodo->info;
+	return SUCESSO;
+}
