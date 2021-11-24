@@ -33,6 +33,6 @@ int incluiNoInicio(Listade *lt, Dado d);
 int excluiDoInicio(Listade *lt, Dado *d);
 int incluiNoFim(Listade *lt, Dado d);
 int excluiDoFim(Listade *lt, Dado *d);
-
+int consultaPorCodigo(Listade lt, int cod, Dado *d);
 
 #endif
