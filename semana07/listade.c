@@ -160,3 +160,43 @@ int incluiDepois(Listade *lt, Dado d, int cod){
 		return SUCESSO;
 	}
 }
+
+int excluiNodo(Listade *lt, Dado *d, int cod){
+	Nodo *pNodo;
+	Nodo *pAux;
+	Nodo *_pAux;
+	if(lt->n == 0){
+		return LISTA_VAZIA;
+	}else{
+		pNodo = lt->inicio;
+		if(lt->n == 1){
+			*d = pNodo->info;
+			lt->fim = NULL;
+			lt->inicio = NULL;
+			lt->n--;
+			free(pNodo);
+			return SUCESSO;
+		}else{
+			while(pNodo->info.cod != cod){
+				if(pNodo->prox == NULL){
+					return CODIGO_INEXISTENTE;
+				}
+				pNodo = pNodo->prox;
+			}
+			*d = pNodo->info;
+			if(pNodo->prox == NULL){
+				lt->fim = pNodo->ant;
+			}else if(pNodo->ant == NULL){
+				lt->inicio = pNodo->prox;
+			}else{
+				pAux = pNodo->ant;
+				pAux->prox = pNodo->prox;
+				_pAux = pNodo->prox;
+				_pAux->ant = pAux;
+			}
+			lt->n--;
+			free(pNodo);
+			return SUCESSO;
+		}
+	}
+}
