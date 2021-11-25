@@ -98,6 +98,16 @@ int main(){
 				}
 				exibeLista(lt);
 				break;
+			case 10:
+				printf("Informe o codigo a ser excluido:\n");
+				scanf("%d", &cod);
+				if(excluiNodo(&lt, &d, cod) == LISTA_VAZIA){
+					printf("Erro: Lista vazia\n");
+				}else{
+					printf("SUCESSO\n");
+				}
+				exibeLista(lt);
+				break;
 		}
 	}while(op != 0);
 	return 0;
