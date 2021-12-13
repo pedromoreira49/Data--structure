@@ -24,5 +24,5 @@ typedef struct {
 } Filase;
 
 void criaFila(Filase *fl);
-
+void exibeFile(Filase fl);
 #endif
