@@ -23,4 +23,6 @@ typedef struct {
 	Nodo *re;
 } Filase;
 
+void criaFila(Filase *fl);
+
 #endif
