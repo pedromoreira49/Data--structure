@@ -15,3 +15,14 @@ void exibeFila(Filase fl){
 		pNodo = pNodo->prox;
 	}
 }
+
+int quantidadeDeNodos(Filase fl){
+	int cont = 0;
+	Nodo *pNodo;
+	pNodo = fl.frente;
+	while(pNodo != NULL){
+		cont++;
+		pNodo = pNodo->prox;
+	}
+	return(cont);
+}
