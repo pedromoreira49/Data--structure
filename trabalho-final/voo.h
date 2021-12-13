@@ -16,7 +16,7 @@ typedef struct nodo Nodo;
 struct nodo{
 	Voo v;
 	Nodo *prox;
-}
+};
 
 typedef struct {
 	Nodo *frente;
