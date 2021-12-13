@@ -66,3 +66,20 @@ int retira(Filase *fl, Voo *v){
 		return SUCESSO;
 	}
 }
+
+int consultaExistencia(Filase fl, int num){
+	Nodo *pNodo;
+	pNodo = fl.frente;
+	if(pNodo == NULL){
+		return FILA_VAZIA;
+	}
+	while(pNodo->v.num != num){
+		pNodo = pNodo->prox;
+		if(pNodo == NULL){
+			return NUMERO_INEXISTENTE;
+		}
+	}
+	if(pNodo->v.num == num){
+		return SUCESSO;
+	}
+}
