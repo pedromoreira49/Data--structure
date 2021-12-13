@@ -51,3 +51,18 @@ int insere(Filase *fl, Voo v){
 		return SUCESSO;
 	}
 }
+
+int retira(Filase *fl, Voo *v){
+	Nodo *pNodo;
+	Nodo *pTemp;
+	pTemp = fl->frente;
+	if(pTemp == NULL){
+		return FILA_VAZIA;
+	}else{
+		pNodo = pTemp->prox;
+		*v = pTemp->v;
+		fl->frente = pNodo;
+		free(pTemp);
+		return SUCESSO;
+	}
+}
