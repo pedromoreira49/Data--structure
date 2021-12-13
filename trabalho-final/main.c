@@ -7,4 +7,18 @@ int main(){
 	int op;
 
 	criaFila(&fl);
+
+	do{
+		printf("Menu:\n");
+		printf("0. Fim             3. Consulta existência de voo\n");
+		printf("1. Insere um voo   4. Quantidade de avioes\n");
+		Printf("2. Retira um voo   5. Exibe todos os voos\n");
+		scanf("%d", &op);
+		switch(op){
+			case 0:
+				exit(0);
+				break;
+		}
+	}
+
 }
