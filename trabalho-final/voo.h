@@ -28,4 +28,5 @@ void exibeFile(Filase fl);
 int quantidadeDeNodos(Filase fl);
 int insere(Filase *fl, Voo v);
 int retira(Filase *fl, Voo *v);
+int consultaExistencia(Filase fl, int num);
 #endif
