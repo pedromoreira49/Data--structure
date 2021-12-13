@@ -27,4 +27,5 @@ void criaFila(Filase *fl);
 void exibeFile(Filase fl);
 int quantidadeDeNodos(Filase fl);
 int insere(Filase *fl, Voo v);
+int retira(Filase *fl, Voo *v);
 #endif
