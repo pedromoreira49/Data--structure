@@ -26,3 +26,28 @@ int quantidadeDeNodos(Filase fl){
 	}
 	return(cont);
 }
+
+int insere(Filase *fl, Voo v){
+	Nodo *pNodo;
+	Nodo *pAux;
+	pNodo = (Nodo *) malloc(sizeof(Nodo));
+	if(pNodo == NULL){
+		return FALTOU_MEMORIA;
+	}else if(fl->frente == NULL){
+		pNodo->v = v;
+		pNodo->prox = NULL;
+		fl->frente = pNodo;
+		fl->re = pNodo;
+		return SUCESSO;
+	}else{
+		pNodo->v = v;
+		pNodo->prox = NULL;
+		pAux = fl->frente;
+		while(pAux->prox != NULL){
+			pAux = pAux->prox;
+		}
+		pAux->prox = pNodo;
+		fl->re = pNodo;
+		return SUCESSO;
+	}
+}
