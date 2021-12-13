@@ -25,4 +25,5 @@ typedef struct {
 
 void criaFila(Filase *fl);
 void exibeFile(Filase fl);
+int quantidadeDeNodos(Filase fl);
 #endif
