@@ -4,7 +4,7 @@
 int main(){
 	Filase fl;
 	Voo v;
-	int op;
+	int op, n;
 
 	criaFila(&fl);
 
@@ -37,6 +37,17 @@ int main(){
 					printf("SUCESSO\n");
 				}
 				exibeFila(fl);
+				break;
+			case 3:
+				printf("Informe o numero do voo:\n");
+				scanf("%d", &n);
+				if(consultaExistencia(fl, n) == FILA_VAZIA){
+					printf("Erro: Fila vazia\n");
+				}else if(consultaExistencia(fl, n) == NUMERO_INEXISTENTE){
+					printf("Erro: Numero inexistente\n");
+				}else{
+					printf("SUCESSO\n");
+				}
 				break;
 		}
 	}while(op != 0);
