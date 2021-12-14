@@ -49,6 +49,12 @@ int main(){
 					printf("SUCESSO\n");
 				}
 				break;
+			case 4:
+				printf("Quantidade de voos: %d\n", quantidadeDeNodos(fl));
+				break;
+			case 5:
+				exibeFila(fl);
+				break;
 		}
 	}while(op != 0);
 	return 0;
